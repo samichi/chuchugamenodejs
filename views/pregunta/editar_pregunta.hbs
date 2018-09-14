@@ -64,6 +64,12 @@
     <label for="audio_pregunta">Audio_pregunta:</label>
     <input type="file" name="audio_pregunta" id="audio_pregunta" accept="audio/mp3">
 
+    <label for="capitulo">Capitulo:</label>
+    <select class="form-control"  id="id_capitulo" name="id_capitulo">
+        {{#each capitulos}}
+        <option value="{{id}}">{{titulo}}</option>
+        {{/each}}
+    </select>
     
     <input type="submit" value="Actualizar"> <br>
     <a href="/preguntas"> <input type="cancelar" value="Cancelar"></a>
