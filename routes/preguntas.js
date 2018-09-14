@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
       res.render('pregunta/index', { preguntas: preguntas }); //Llama a un archivo index.hbs dentro de la carpeta /views/pregunta y envia un objeto preguntas
     });
 });
-
+ 
 router.get('/eliminar/:id', (req, res) => {
   let id = req.params.id; //Tomo el id de la pregunta que llega en la URL
   if(req.params.id != undefined) { 
@@ -26,14 +26,17 @@ router.get('/eliminar/:id', (req, res) => {
 router.get('/editar/:id', (req, res)=> {
   let id = req.params.id;
   if(id!= undefined) {
-    knex('pregunta')
-    .select()
-    .where('id', id)
-    .first()
-    .then((pregunta)=> {
-        
-      res.render('pregunta/editar_pregunta', pregunta);
-    })
+    knex('capitulo')
+    .then((capitulos)=> {
+      knex('pregunta')
+      .select()
+      .where('id', id)
+      .first()
+      .then((pregunta)=> {
+          
+        res.render('pregunta/editar_pregunta', {pregunta:pregunta,capitulos:capitulos});
+        })
+      })
   }
 });
 

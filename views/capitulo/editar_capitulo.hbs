@@ -26,14 +26,28 @@
 
 <div class="container">
     <h1>Editar capitulo</h1><br>
-    <form action="/capitulos/editar/{{id}}" method="POST" id="editar-capitulo" enctype="multipart/form-data">
+    <form action="/capitulos/editar/{{capitulo.id}}" method="POST" id="editar-capitulo" enctype="multipart/form-data">
     <label for="nombre">Titulo: </label>
-<input type="text" value="{{titulo}}" name="titulo">
+<input type="text" value="{{capitulo.titulo}}" name="titulo">
 <label for="usuario">video youtube: </label>
-<input type="text" value="{{video_youtube}}" name="video_youtube">
+<input type="text" value="{{capitulo.video_youtube}}" name="video_youtube">
 
 <label for="portada">Portada:</label>
 <input type="file" name="portada" id="portada" accept="image/x-png,image/jpeg">
+
+<label for="country">Titulo de Excursion</label>
+    <select class="form-control" name="id_excursion">
+        {{#each excursiones}}
+            <option value="{{id}}">{{titulo}}</option>
+        {{/each}}
+    </select>
+
+<label for="capitulo">Capitulo:</label>
+    <select class="form-control"  id="id_capitulo" name="id_capitulo">
+        {{#each capitulos}}
+        <option value="{{id}}">{{titulo}}</option>
+        {{/each}}
+    </select>
 
     <input type="submit" value="Actualizar">
     <a href="/capitulos"> <input type="cancelar" value="Cancelar"></a>

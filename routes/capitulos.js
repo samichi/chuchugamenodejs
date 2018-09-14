@@ -26,13 +26,14 @@ router.get('/eliminar/:id', (req, res) => {
 router.get('/editar/:id', (req, res)=> {
   let id = req.params.id;
   if(id!= undefined) {
-    knex('capitulo')
-    .select()
-    .where('id', id)
-    .first()
-    .then((capitulo)=> {
-        
-      res.render('capitulo/editar_capitulo', capitulo);
+    knex('excursion')
+    .then((excursiones)=> {
+      knex('capitulo')
+      .where('id' , id)
+      .first()
+      .then((capitulo)=> {
+      res.render('capitulo/editar_capitulo', {capitulo:capitulo, excursiones:excursiones});
+      })
     })
   }
 });

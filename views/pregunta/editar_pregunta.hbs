@@ -42,13 +42,13 @@
 
 <div class="container">
     <h1>Editar capitulo</h1><br>  
-    <form action="/preguntas/editar/{{id}}" method="POST" id="editar-pregunta" enctype="multipart/form-data">
+    <form action="/preguntas/editar/{{pregunta.id}}" method="POST" id="editar-pregunta" enctype="multipart/form-data">
     <label for="pregunta">Pregunta</label>
-    <input type="text" placeholder="Nombre" name="pregunta" value="{{pregunta}}">
+    <input type="text" placeholder="Nombre" name="pregunta" value="{{pregunta.pregunta}}">
 
     <label for="respuesta">Respuesta</label>
     <select class="form-control" name="respuesta" id="respuesta">
-        {{#select respuesta}}
+        {{#select pregunta.respuesta}}
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
