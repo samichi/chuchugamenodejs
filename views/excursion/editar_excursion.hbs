@@ -1,0 +1,38 @@
+<script>
+    if(localStorage.getItem('id_usuario') == undefined || localStorage.getItem('id_usuario') == null ) {
+        window.location = "/login"
+    }
+</script>
+<!--<h1>Editar excursion</h1>
+<form action="/excursiones/editar/{{id}}" method="POST" id="editar-excursion" enctype="multipart/form-data">
+<label for="titulo">Titulo: </label>
+<input type="text" value="{{titulo}}" name="titulo">
+<label for="descripcion">descripcion: </label>
+<input type="text" value="{{descripcion}}" name="descripcion">
+<label for="creditos">creditos:</label>
+<input type="text" value="{{creditos}}" name="creditos">
+<label for="portada">portada:</label>
+<input type="file" name="portada" id="portada" accept="image/x-png,image/jpeg">-->
+<!--<img src="{{foto}}" alt="" width="150" height="150">-->
+
+<!--<button type="submit">Actualizar</button>
+</form>-->
+
+
+
+
+<div class="container">
+    <h1>Editar excursion</h1><br>
+  <form action="/excursiones/editar/{{id}}" method="POST" id="editar-excursion" enctype="multipart/form-data">
+    <label for="titulo">Titulo</label>
+    <input type="text" value="{{titulo}}" name="titulo" placeholder="Titulo">
+    <label for="descripcion">Descripcion</label>
+    <input type="text"  value="{{creditos}}" name="creditos" placeholder="Descripcion">
+    <label for="creditos">Creditos</label>
+    <input type="text"  value="{{descripcion}}" name="descripcion" placeholder="Creditos">
+    <label for="portada">Portada</label>
+    <input type="file"  name="portada" id="portada" accept="image/x-png,image/jpeg" placeholder="Portada">
+    <input type="submit" value="Actualizar"> <br>
+    <a href="/excursiones"> <input type="cancelar" value="Cancelar"></a>
+  </form>
+</div>

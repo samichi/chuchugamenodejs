@@ -1,0 +1,53 @@
+    <div>     
+      <div class="imagen">
+      <div class="hero-centro2 ">
+         <!--<h2>ELIJA EL USUARIO</h2> -->
+          <div id="tablaUsuarioExcursiones" >
+
+            {{#each usuarios}}
+            <div class="responsive gallery2">
+              <a href="/excursiones_usuario/{{id}}">
+                <button class="btnExcursionActividad" type="button">
+                  <img class="portadaExcursionJuego" src="{{foto}}" alt="">
+                  <div>{{nombre}}</div>
+                  <div>Puntos: {{puntos}}</div>
+                </button>
+              </a>
+            </div>
+            {{/each}}
+
+            <!--<div class="responsive gallery2">
+              <a href="/excursiones_usuario">
+                <button class="btnExcursionActividad" type="button">
+                  <img class="portadaExcursionJuego" src="../img/avatar04.png" alt="">
+                  <div>ISA</div>
+                </button>
+              </a>
+            </div>
+            <div class="responsive gallery2">
+              <a href="/excursiones_usuario">
+                <button class="btnExcursionActividad" type="button">
+                  <img class="portadaExcursionJuego" src="../img/avatar02.png" alt="">
+                  <div>MARIA</div>
+                </button>
+              </a>
+            </div>
+            <div class="responsive gallery2">
+              <a href="/excursiones_usuario">
+                <button class="btnExcursionActividad" type="button">
+                  <img class="portadaExcursionJuego" src="../img/avatar03.png" alt="">
+                  <div>JENNY</div>
+                </button>
+              </a>
+            </div>
+          </div>-->
+      </div>
+      </div>   
+      <div class="hero-der-arriba1">   
+        <a href="/">
+          <img class="ami"src="../img/atras.png" alt="">
+         </a>
+      </div>  
+
+
+    </div>

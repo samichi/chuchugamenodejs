@@ -1,0 +1,24 @@
+    <div>     
+      <div class="imagen">
+      <div class="hero-centro2 ">
+         <!--<h2>ELIJA LA EXCURSION</h2> -->
+          <div id="tablaUsuarioExcursiones" >
+            <h1>{{usuario.id}}</h1>
+            {{#each excursiones}}
+            <div class="responsive gallery2">
+                <a href='/capitulos_general/{{../usuario.id}}/{{id}}'>
+                {{usuario.id}}
+              <button class="btnExcursionActividad" type="button">
+                <img class="portadaExcursionJuego" src="{{portada}}" alt="{{titulo}}">
+                <div>{{titulo}}</div>
+            </div>
+            {{/each}}
+      </div>
+      </div>
+      
+      <div class="hero-der-arriba1">   
+        <a href="/jugar">
+          <img class="ami"src="../img/atras.png" alt="">
+         </a>
+      </div>    
+    </div>

@@ -1,0 +1,33 @@
+<script>
+    if(localStorage.getItem('id_usuario') == undefined || localStorage.getItem('id_usuario') == null ) {
+        window.location = "/login"
+    }
+</script>
+
+<!--<button id="salir">Cerrar sesion</button>
+
+<a href="/usuarios">usuarios</a>
+<br>
+<a href="/excursiones">excursiones</a>
+<br>
+<a href="/capitulos">capitulos</a>
+<br>
+<a href="/preguntas">preguntas</a>-->
+
+<div class="navbar">
+    
+  <a id="salir" href="/">Cerrar sesion</a>
+  <a href="/usuarios">Usuarios</a>
+  <a href="/excursiones">Excursiones</a>
+  <a href="/capitulos">Capitulos</a>
+  <a href="/preguntas">Preguntas</a>
+</div>
+
+
+
+<script>
+    $("#salir").click(function(){
+        localStorage.removeItem('id_usuario');
+        window.location = "/login"
+    })
+</script>

@@ -1,0 +1,41 @@
+<script>
+    if(localStorage.getItem('id_usuario') == undefined || localStorage.getItem('id_usuario') == null ) {
+        window.location = "/login"
+    }
+</script>
+
+<!--<h1>Editar capitulo</h1>
+<form action="/capitulos/editar/{{id}}" method="POST" id="editar-capitulo" enctype="multipart/form-data">
+<label for="nombre">Titulo: </label>
+<input type="text" value="{{titulo}}" name="titulo">
+<label for="usuario">video youtube: </label>
+<input type="text" value="{{video_youtube}}" name="video_youtube">
+
+<label for="portada">Portada:</label>
+<input type="file" name="portada" id="portada" accept="image/x-png,image/jpeg">-->
+<!--<select class="form-control" name="rol">
+{{#select rol}}
+    <option value="A">Administrador</option>
+    <option value="J">Jugador</option>
+{{/select}}
+</select>-->
+<!--<button type="submit">Actualizar</button>
+</form>-->
+
+
+
+<div class="container">
+    <h1>Editar capitulo</h1><br>
+    <form action="/capitulos/editar/{{id}}" method="POST" id="editar-capitulo" enctype="multipart/form-data">
+    <label for="nombre">Titulo: </label>
+<input type="text" value="{{titulo}}" name="titulo">
+<label for="usuario">video youtube: </label>
+<input type="text" value="{{video_youtube}}" name="video_youtube">
+
+<label for="portada">Portada:</label>
+<input type="file" name="portada" id="portada" accept="image/x-png,image/jpeg">
+
+    <input type="submit" value="Actualizar">
+    <a href="/capitulos"> <input type="cancelar" value="Cancelar"></a>
+  </form>
+</div>

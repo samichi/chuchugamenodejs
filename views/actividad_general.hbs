@@ -1,0 +1,38 @@
+        <div>     
+      <div class="listaMenu">
+      <div class="pantalla">
+          <div class="hero-der-abajo11" >
+            <a href="/tarea_general/{{capitulo.id}}/{{excursion.id}}">
+                <button type="button" class="btn warning w3-button w3-circle w3-black ima"  role="button">
+                    <img class="ima" src="../img/atras.png" alt="">PREGUNTA
+                </button>   
+            </a>            
+          </div>
+          <div class="imagen">
+              <div class="hero-centro3">
+                  <div class="videoExcursion">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{capitulo.urlId}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+                  <hgroup>
+                      <h2>{{capitulo.titulo}}</h2>
+                      <div>
+                          <h3>DESCRIPCION</h3>
+                          <p>{{excursion.descripcion}}</p>
+                      </div>
+                      <div>
+                          <h3>CREDITOS</h3>
+                          <p>{{excursion.creditos}}</p>
+                      </div>
+                  </hgroup>
+              </div>
+
+          </div>
+      </div>
+      </div>
+      <div class="hero-der-arriba1">   
+          <a href='/capitulos_general/{{../usuario.id}}/{{id}}'>
+            <button type="button" class="btn warning w3-button w3-circle w3-black ima"  role="button" onclick="regresar()">
+                <img class="ima" src="../img/atras.png" alt="">ATRAS
+            </button>  </a>
+      </div>    
+    </div>

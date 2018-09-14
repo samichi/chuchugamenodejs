@@ -1,0 +1,42 @@
+<script>
+    if(localStorage.getItem('id_usuario') == undefined || localStorage.getItem('id_usuario') == null ) {
+        window.location = "/login"
+    }
+</script>
+<!--<h1>Agregar excursion</h1>
+
+<form action="/excursiones/agregar/" method="POST" id="editar-excursion" enctype="multipart/form-data">
+<label for="titulo">Titulo: </label>
+<input type="text" placeholder="Nombre" name="titulo">
+<label for="descripcion">Descripcion: </label>
+<input type="text" name="descripcion">
+<label for="creditos">Creditos:</label>
+<input type="text" name="creditos">
+
+<label for="foto">Portada:</label>
+<input type="file" name="portada" id="portada" accept="image/x-png,image/jpeg">
+
+<button type="submit">Agregar</button>
+</form>-->
+
+
+
+<div class="container">
+    <h1>Agregar excursion</h1><br>
+    <form action="/excursiones/agregar/" method="POST" id="editar-excursion" enctype="multipart/form-data">    
+    <label for="titulo">Titulo</label>
+    <input type="text" placeholder="Nombre" name="titulo">
+    
+    <label for="descripcion">Descripcion</label>
+    <input type="text" name="descripcion" placeholder="Descripcion">
+
+    <label for="creditos">Creditos</label>
+    <input type="text" name="creditos" placeholder="Creditos">
+
+    <label for="foto">Portada</label>
+    <input type="file" name="portada" id="portada" accept="image/x-png,image/jpeg">
+
+    <input type="submit" value="Agregar"> <br>
+    <a href="/excursiones"> <input type="cancelar" value="Cancelar"></a>
+  </form>
+</div>

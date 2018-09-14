@@ -1,0 +1,76 @@
+<script>
+    if(localStorage.getItem('id_usuario') == undefined || localStorage.getItem('id_usuario') == null ) {
+        window.location = "/login"
+    }
+</script>
+
+
+<div class="navbar">    
+  <a id="salir" href="/">Cerrar sesion</a>
+  <a href="/usuarios">Usuarios</a>
+  <a href="/excursiones">Excursiones</a>
+  <a href="/capitulos">Capitulos</a>
+  <a href="/preguntas">Preguntas</a>
+</div>
+<div class="table">
+    <div class="row">
+        <div class="cell">            
+        </div>
+    </div>
+</div>
+
+<!--<a href="/preguntas/agregar">Agregar</a>-->
+
+{{#each preguntas}}
+
+<!--<h1>{{id}}</h1>
+<h2>{{pregunta}}</h2>
+<audio src="{{audio_pregunta}}" controls></audio>
+<img src="{{img_opcion_1}}" alt="" width="150" height="150">
+<img src="{{img_opcion_2}}" alt="" width="150" height="150">
+<img src="{{img_opcion_3}}" alt="" width="150" height="150">
+<img src="{{img_respuesta}}" alt="" width="150" height="150">
+<a href="/preguntas/editar/{{id}}">Editar</a>
+<a href="/preguntas/eliminar/{{id}}">Eliminar</a>-->
+
+					<div class="table">
+						<div class="row">
+							<div class="cell" >
+								<h1>{{id}}</h1>
+							</div>
+							<div class="cell" >
+								<h2>{{pregunta}}</h2>
+							</div>
+							<div class="cell">
+								<audio src="{{audio_pregunta}}" controls></audio>
+							</div>
+							<div class="cell">
+								<img src="{{img_opcion_1}}" alt="" width="70">
+							</div>
+							<div class="cell">
+								<img src="{{img_opcion_2}}" alt="" width="70">
+							</div>
+							<div class="cell">
+								<img src="{{img_opcion_3}}" alt="" width="70">
+							</div>
+							<div class="cell">
+								<img src="{{img_respuesta}}" alt="" width="70">
+							</div>
+							<div class="cell">
+								<a href="/preguntas/editar/{{id}}">Editar</a>
+							</div>
+							<div class="cell">
+								<a href="/preguntas/eliminar/{{id}}">Eliminar</a>
+							</div>
+						</div>
+					</div>
+
+{{/each}}
+
+<div class="table">
+    <div class="row">
+        <div class="cell">
+            <a href="/preguntas/agregar">Agregar</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<script>
+    if(localStorage.getItem('id_usuario') == undefined || localStorage.getItem('id_usuario') == null ) {
+        window.location = "/login"
+    }
+</script>
+<!--<h1>Agregar Usuario</h1>
+
+<form action="/usuarios/agregar/" method="POST" id="editar-usuario" enctype="multipart/form-data">
+<label for="nombre">Nombre: </label>
+<input type="text" placeholder="Nombre" name="nombre">
+<label for="usuario">Usuario: </label>
+<input type="text" name="usuario">
+<label for="clave">Clave:</label>
+<input type="text" name="clave">
+
+<label for="foto">Foto:</label>
+<input type="file" name="foto" id="foto" accept="image/x-png,image/jpeg">
+<img src="" alt="" width="150" height="150">
+
+<select class="form-control" name="rol">
+    <option value="A">Administrador</option>
+    <option value="J">Jugador</option>
+</select>
+
+
+<button type="submit">Agregar</button>
+
+</form>-->
+
+
+
+<div class="container">
+    <h1>Agregar Usuario</h1><br>
+    <form action="/usuarios/agregar/" method="POST" id="editar-usuario" enctype="multipart/form-data">
+    
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" placeholder="Nombre">
+
+    <label for="usuario">Usuario</label>
+    <input type="text" name="usuario" placeholder="Usuario">
+
+    <label for="clave">Clave</label>
+    <input type="password" name="clave" placeholder="Clave">
+
+    <label for="foto">Foto</label>
+    <input type="file" name="foto" id="foto" accept="image/x-png,image/jpeg">
+    <img src="" alt="" width="30%">
+
+    <label for="country">Rol</label>
+    <select class="form-control" name="rol">
+        <option value="A">Administrador</option>
+        <option value="J">Jugador</option>
+    </select>
+
+    <input type="submit" value="Agregar"> <br>
+
+
+    <a href="/usuarios"> <input type="cancelar" value="Cancelar"></a>
+  </form>
+</div>

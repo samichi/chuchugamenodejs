@@ -1,0 +1,58 @@
+<script>
+    if(localStorage.getItem('id_usuario') == undefined || localStorage.getItem('id_usuario') == null ) {
+        window.location = "/login"
+    }
+</script>
+
+<div class="navbar">    
+  <a id="salir" href="/">Cerrar sesion</a>
+  <a href="/usuarios">Usuarios</a>
+  <a href="/excursiones">Excursiones</a>
+  <a href="/capitulos">Capitulos</a>
+  <a href="/preguntas">Preguntas</a>
+</div>
+<div class="table">
+    <div class="row">
+        <div class="cell">            
+        </div>
+    </div>
+</div>
+
+
+
+<!--<a href="/capitulos/agregar">Agregar</a>-->
+
+{{#each capitulos}}
+
+<!--<h1>{{titulo}}</h1>
+<img src="{{portada}}" alt="" width="150" height="150">
+
+<a href="/capitulos/editar/{{id}}">Editar</a>
+<a href="/capitulos/eliminar/{{id}}">Eliminar</a>-->
+
+
+					<div class="table">
+						<div class="row">
+							<div class="cell" >
+								<h1>{{titulo}}</h1>
+							</div>
+							<div class="cell" >
+								<img src="{{portada}}" alt="" width="30%">
+							</div>
+							<div class="cell">
+								<a href="/capitulos/editar/{{id}}">Editar</a>
+							</div>
+							<div class="cell">
+								<a href="/capitulos/eliminar/{{id}}">Eliminar</a>
+							</div>
+						</div>
+					</div>
+
+{{/each}}
+<div class="table">
+    <div class="row">
+        <div class="cell">
+            <a href="/capitulos/agregar">Agregar</a>
+        </div>
+    </div>
+</div>

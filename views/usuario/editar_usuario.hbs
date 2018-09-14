@@ -1,0 +1,57 @@
+<script>
+    if(localStorage.getItem('id_usuario') == undefined || localStorage.getItem('id_usuario') == null ) {
+        window.location = "/login"
+    }
+</script>
+<!--<h1>Editar Usuario</h1>
+
+<form action="/usuarios/editar/{{id}}" method="POST" id="editar-usuario" enctype="multipart/form-data">
+<label for="nombre">Nombre: </label>
+<input type="text" value="{{nombre}}" name="nombre">
+<label for="usuario">Usuario: </label>
+<input type="text" value="{{usuario}}" name="usuario">
+<label for="clave">Clave:</label>
+<input type="text" value="{{clave}}" name="clave">
+
+<label for="foto">Foto:</label>
+<input type="file" name="foto" id="foto" accept="image/x-png,image/jpeg">-->
+<!--<img src="{{foto}}" alt="" width="150" height="150">-->
+
+<!--<select class="form-control" name="rol">
+{{#select rol}}
+    <option value="A">Administrador</option>
+    <option value="J">Jugador</option>
+{{/select}}
+</select>
+
+
+<button type="submit">Actualizar</button>
+
+</form>-->
+
+<div class="container">
+    <h1>Editar Usuario</h1><br>
+  <form action="/usuarios/editar/{{id}}" method="POST" id="editar-usuario" enctype="multipart/form-data">
+    <label for="nombre">Nombre</label>
+    <input type="text" value="{{nombre}}" name="nombre" placeholder="Su nombre..">
+
+    <label for="usuario">Usuario</label>
+    <input type="text" value="{{usuario}}" name="usuario" placeholder="Su usuario..">
+
+    <label for="clave">Clave</label>
+    <input type="password" value="{{clave}}" name="clave" placeholder="Su clave..">
+
+    <label for="foto">Foto</label>
+    <input type="file" name="foto" id="foto" accept="image/x-png,image/jpeg">
+
+    <label for="country">Rol</label>
+    <select class="form-control" name="rol">
+        {{#select rol}}
+            <option value="A">Administrador</option>
+            <option value="J">Jugador</option>
+        {{/select}}
+    </select>
+    <input type="submit" value="Actualizar"> <br>
+    <a href="/usuarios"> <input type="cancelar" value="Cancelar"></a>
+  </form>
+</div>

@@ -1,0 +1,96 @@
+<!--Modal-->
+<div class="modal fade" id="respuesta" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h1>La respuesta era:</h1>
+            <img src="" id="img_respuesta" width="300" height="300"/>
+        </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="regresar()">OK</button>
+        </div>
+    </div>
+      
+</div>
+<!--Fin Modal-->
+
+<div>
+  <div class="imagen">
+      <div class="hero-centro2 ">
+         <!--<h2>TAREA {{pregunta.pregunta}}</h2>-->
+         <h4 id="puntaje"></h4> 
+          <div id="tablaUsuarioExcursiones" >
+            <div class="responsive gallery2">
+              <button class="btnExcursionActividad" type="button" onclick="verificarRespuesta(1)">
+                <img class="portadaExcursionJuego" src="{{pregunta.img_opcion_1}}" alt="">
+              </button>
+            </div>
+            <div class="responsive gallery2">
+              <button class="btnExcursionActividad" type="button" onclick="verificarRespuesta(2)">
+                <img class="portadaExcursionJuego" src="{{pregunta.img_opcion_2}}" alt="">
+              </button>
+            </div>
+            <div class="responsive gallery2">
+              <button class="btnExcursionActividad" type="button" onclick="verificarRespuesta(3)">
+                <img class="portadaExcursionJuego" src="{{pregunta.img_opcion_3}}" alt="">
+              </button>
+            </div>
+          </div>
+      </div>
+      </div>
+      <div class="hero-der-arriba1">   
+        <button type="button" class="btn warning w3-button w3-circle w3-black ima"  role="button" onclick="regresar();">
+          <img class="ima" src="" alt="">ATRAS
+        </button>
+      </div>    
+    </div>
+
+    <audio src="{{pregunta.audio_pregunta}}" autoplay id="audioPlayer"></audio>
+
+    <script>
+      
+      //Funcion que comprueba la respuesta correcta
+      function verificarRespuesta(respuesta) {
+
+        if({{pregunta.respuesta}} == respuesta) {
+          console.log("Acertaste")
+
+          $("#audioPlayer").attr("src", '/audio/aplausos.mp3');
+          var audio = $("#audioPlayer")[0];
+          audio.load();
+          audio.play();
+
+          setTimeout(
+            function() {
+              window.history.back();
+            },
+          3000);
+
+        }else{
+
+          console.log("Respuesta incorrecta");
+
+          $("#audioPlayer").attr("src", '/audio/vuelvelo_a_intentar.mp3');
+          var audio = $("#audioPlayer")[0];
+          audio.load();
+          audio.play();
+
+          if({{pregunta.respuesta}} == 1){
+            $("#img_respuesta").attr("src", '{{pregunta.img_opcion_1}}')
+          }
+          if({{pregunta.respuesta}} == 2){
+            $("#img_respuesta").attr("src", '{{pregunta.img_opcion_2}}')
+          }
+          if({{pregunta.respuesta}} == 3){
+            $("#img_respuesta").attr("src", '{{pregunta.img_opcion_3}}')
+          }
+            
+
+          $("#respuesta").modal('show');
+        }
+      }
+    </script>

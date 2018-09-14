@@ -1,0 +1,71 @@
+<script>
+    if(localStorage.getItem('id_usuario') == undefined || localStorage.getItem('id_usuario') == null ) {
+        window.location = "/login"
+    }
+</script>
+<!--<h1>Editar capitulo</h1>
+<form action="/preguntas/editar/{{id}}" method="POST" id="editar-pregunta" enctype="multipart/form-data">
+<label for="pregunta">Pregunta: </label>
+<input type="text" placeholder="Nombre" name="pregunta" value="{{pregunta}}">
+<label for="respuesta">respuesta:</label>
+<select name="respuesta" id="respuesta">
+    {{#select respuesta}}
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    {{/select}}
+</select>-->
+
+<!--<select id="id_capitulo" name="id_capitulo">
+{{#each capitulos}}
+<option value="{{id}}">{{titulo}}</option>
+{{/each}}
+</select>-->
+
+<!--<label for="img_opcion_1">img_opcion_1:</label>
+<input type="file" name="img_opcion_1" id="img_opcion_1" accept="image/x-png,image/jpeg">
+
+<label for="img_opcion_2">img_opcion_2:</label>
+<input type="file" name="img_opcion_2" id="img_opcion_2" accept="image/x-png,image/jpeg">
+
+<label for="img_opcion_3">img_opcion_3:</label>
+<input type="file" name="img_opcion_3" id="img_opcion_3" accept="image/x-png,image/jpeg">
+
+<label for="audio_pregunta">audio_pregunta:</label>
+<input type="file" name="audio_pregunta" id="audio_pregunta" accept="audio/mp3">
+
+<button type="submit">Actualizar</button>
+
+</form>-->
+
+<!--+++++++++++++++++++++++++++++++++-->
+
+<div class="container">
+    <h1>Editar capitulo</h1><br>  
+    <form action="/preguntas/editar/{{id}}" method="POST" id="editar-pregunta" enctype="multipart/form-data">
+    <label for="pregunta">Pregunta</label>
+    <input type="text" placeholder="Nombre" name="pregunta" value="{{pregunta}}">
+
+    <label for="respuesta">Respuesta</label>
+    <select class="form-control" name="respuesta" id="respuesta">
+        {{#select respuesta}}
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        {{/select}}
+    </select>
+    <label for="img_opcion_1">Img_opcion_1</label>
+    <input type="file" name="img_opcion_1" id="img_opcion_1" accept="image/x-png,image/jpeg">
+    <label for="img_opcion_2">Img_opcion_2:</label>
+    <input type="file" name="img_opcion_2" id="img_opcion_2" accept="image/x-png,image/jpeg">
+    <label for="img_opcion_3">Img_opcion_3:</label>
+    <input type="file" name="img_opcion_3" id="img_opcion_3" accept="image/x-png,image/jpeg">
+
+    <label for="audio_pregunta">Audio_pregunta:</label>
+    <input type="file" name="audio_pregunta" id="audio_pregunta" accept="audio/mp3">
+
+    
+    <input type="submit" value="Actualizar"> <br>
+    <a href="/preguntas"> <input type="cancelar" value="Cancelar"></a>
+  </form>
+</div>

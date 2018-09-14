@@ -1,0 +1,44 @@
+<script>
+    if(localStorage.getItem('id_usuario') == undefined || localStorage.getItem('id_usuario') == null ) {
+        window.location = "/login"
+    }
+</script>
+
+<!--<h1>Agregar capitulos</h1>
+<form action="/capitulos/agregar/" method="POST" id="editar-capitulo" enctype="multipart/form-data">
+<label for="titulo">Titulo: </label>
+<input type="text" placeholder="Nombre" name="titulo">
+<label for="video_youtube">Video_youtube: </label>
+<input type="text" name="video_youtube">
+<label for="portada">Foto:</label>
+<input type="file" name="portada" id="portada" accept="image/x-png,image/jpeg">
+<select name="id_excursion" id="">
+{{#each excursiones}}
+<option value="{{id}}">{{titulo}}</option>
+{{/each}}
+</select>
+<button type="submit">Agregar</button>
+</form>-->
+
+
+<div class="container">
+    <h1>Agregar capitulos</h1><br>
+    <form action="/capitulos/agregar/" method="POST" id="editar-capitulo" enctype="multipart/form-data">
+    <label for="titulo">Titulo</label>
+    <input type="text" placeholder="Nombre" name="titulo">    
+    <label for="video_youtube">Video_youtube</label>
+    <input type="text" name="video_youtube" placeholder="Video youtube">
+    <label for="portada">Foto</label>
+    <input type="file" name="portada" id="portada" accept="image/x-png,image/jpeg">
+
+    <label for="country">ID de la excursion</label>
+    <select class="form-control" name="id_excursion">
+        {{#each excursiones}}
+        <option value="{{id}}">{{titulo}}</option>
+        {{/each}}
+    </select>
+
+    <input type="submit" value="Agregar"> <br>
+    <a href="/capitulos"> <input type="cancelar" value="Cancelar"></a>
+  </form>
+</div>
