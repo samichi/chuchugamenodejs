@@ -1,13 +1,7 @@
         <div>     
       <div class="listaMenu">
       <div class="pantalla">
-          <div class="hero-der-abajo11" >
-            <a href="/tarea_general/{{capitulo.id}}/{{excursion.id}}">
-                <button type="button" class="btn warning w3-button w3-circle w3-black ima"  role="button">
-                    <img class="ima" src="../img/atras.png" alt="">PREGUNTA
-                </button>   
-            </a>            
-          </div>
+
           <div class="imagen">
               <div class="hero-centro3">
                   <div class="videoExcursion">
@@ -29,10 +23,36 @@
           </div>
       </div>
       </div>
-      <div class="hero-der-arriba1">   
-          <a href='/capitulos_general/{{../usuario.id}}/{{id}}'>
-            <button type="button" class="btn warning w3-button w3-circle w3-black ima"  role="button" onclick="regresar()">
-                <img class="ima" src="../img/atras.png" alt="">ATRAS
-            </button>  </a>
-      </div>    
-    </div>
+      
+      <div>
+            <div>
+                <div class="carousel-inner" role="listbox">
+                    <div class="mbr-section mbr-section-hero carousel-item dark center mbr-section-full active" data-bg-video-slide="false" style="background-image: url(/img/video.png);">
+                        <div class="mbr-table-cell">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+      <div class="dere-arriba">
+        <a href='/capitulos_general/{{../usuario.id}}/{{id}}' class="jugar"><i class="fas fa-arrow-left fa-3x"></i></a> 
+        <a href="#" class="jugar" role="button" id='play' onclick="audio()"><i class="fas fa-music fa-3x"><audio src="/audio/instruccion_actividad.mp3" autoplay id="audioPlayer"></audio></i></a>
+        <a href="/tarea_general/{{capitulo.id}}/{{excursion.id}}" class="jugar"><i class="fas fa-pencil-alt"></i></a> 
+        </div>
+        </div>
+
+  <audio src="/audio/instruccion_actividad.mp3" autoplay id="audioPlayer"></audio>
+
+  <script>
+      //funcion audio
+       function audio() {
+           var audio = document.getElementById("audioPlayer");
+            var button = document.getElementById("play");
+    
+          audio.play();
+        
+       }
+    </script>
+  

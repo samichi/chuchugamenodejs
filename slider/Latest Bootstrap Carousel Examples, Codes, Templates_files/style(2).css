@@ -589,8 +589,7 @@ p.lead,
  */
 body {
   font-family: 'Raleway', sans-serif;
-  color: #232323; 
-  margin:0;}
+  color: #232323; }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
@@ -2015,94 +2014,4 @@ html.is-builder :not([data-app-remove-it]).card-text + .card-btn {
 	text-indent: -2400px;
 	text-align: center;
 	padding: 0;
-}
-
-
-
-.izq {
-  position: fixed;
-  top: 20%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.izq a {
-  display: block;
-  text-align: center;
-  padding: 15px;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 20px;
-  background: #ff6600;
-}
-
-.fa-lock {
-  color: white;
-}
-
-.izq a:hover {
-
-  background: #d66a22;
-}
-
-.dere-abajo {
-  position: fixed;
-  top: 74%;
-  right: 0px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.dere-abajo a {
-  display: block;
-  text-align: center;
-  padding: 20px 50px 20px 50px;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 20px;
-  background: #ff6600;
-}
-
-.fa-gamepad {
-  color: white;
-}
-
-.dere-abajo a:hover {
-
-  background: #d66a22;
-}
-
-
-
-
-.dere-arriba {
-  position: fixed;
-  top: 25%;
-  right: 0px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.dere-arriba a {
-  display: block;
-  text-align: center;
-  padding: 20px 50px 20px 50px;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 20px;
-  background: #ff6600;
-}
-
-.fa-gamepad {
-  color: white;
-}
-
-
-
-.dere-arriba a:hover {
-
-  background: #d66a22;
 }

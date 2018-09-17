@@ -1,9 +1,8 @@
-    <div>     
+    
       <div class="imagen">
       <div class="hero-centro2 ">
          <!--<h2>ELIJA EL USUARIO</h2> -->
           <div id="tablaUsuarioExcursiones" >
-
             {{#each usuarios}}
             <div class="responsive gallery2">
               <a href="/excursiones_usuario/{{id}}">
@@ -15,39 +14,42 @@
               </a>
             </div>
             {{/each}}
-
-            <!--<div class="responsive gallery2">
-              <a href="/excursiones_usuario">
-                <button class="btnExcursionActividad" type="button">
-                  <img class="portadaExcursionJuego" src="../img/avatar04.png" alt="">
-                  <div>ISA</div>
-                </button>
-              </a>
-            </div>
-            <div class="responsive gallery2">
-              <a href="/excursiones_usuario">
-                <button class="btnExcursionActividad" type="button">
-                  <img class="portadaExcursionJuego" src="../img/avatar02.png" alt="">
-                  <div>MARIA</div>
-                </button>
-              </a>
-            </div>
-            <div class="responsive gallery2">
-              <a href="/excursiones_usuario">
-                <button class="btnExcursionActividad" type="button">
-                  <img class="portadaExcursionJuego" src="../img/avatar03.png" alt="">
-                  <div>JENNY</div>
-                </button>
-              </a>
-            </div>
-          </div>-->
       </div>
       </div>   
-      <div class="hero-der-arriba1">   
-        <a href="/">
-          <img class="ami"src="../img/atras.png" alt="">
-         </a>
-      </div>  
-
 
     </div>
+
+
+    <div>
+        <div>
+            <div>
+                <div class="carousel-inner" role="listbox">
+                    <div class="mbr-section mbr-section-hero carousel-item dark center mbr-section-full active" data-bg-video-slide="false" style="background-image: url(./img/excursion_capitulo.png);">
+                        <div class="mbr-table-cell">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<div class="dere-arriba">
+  <a href="/" class="jugar"><i class="fas fa-arrow-left fa-3x"></i></a> 
+  <a href="#" class="jugar" role="button" id='play' onclick="audio()"><i class="fas fa-music fa-3x"><audio src="../audio/instruccion_personaje.mp3" autoplay id="audioPlayer"></audio></i></a>
+        
+</div>
+
+  <audio src="/audio/instruccion_personaje.mp3" autoplay id="audioPlayer"></audio>
+
+  <script>
+      //funcion audio
+       function audio() {
+           var audio = document.getElementById("audioPlayer");
+            var button = document.getElementById("play");
+    
+          audio.play();
+        
+       }
+    </script>

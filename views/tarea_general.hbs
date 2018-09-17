@@ -41,18 +41,39 @@
             </div>
           </div>
       </div>
-      </div>
-      <div class="hero-der-arriba1">   
-        <button type="button" class="btn warning w3-button w3-circle w3-black ima"  role="button" onclick="regresar();">
-          <img class="ima" src="" alt="">ATRAS
-        </button>
-      </div>    
+      </div>  
     </div>
 
     <audio src="{{pregunta.audio_pregunta}}" autoplay id="audioPlayer"></audio>
 
+    <div>
+            <div>
+                <div class="carousel-inner" role="listbox">
+                    <div class="mbr-section mbr-section-hero carousel-item dark center mbr-section-full active" data-bg-video-slide="false" style="background-image: url(/img/video.png);">
+                        <div class="mbr-table-cell">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+      <div class="dere-arriba">
+        <a onclick="regresar();" class="jugar" role="button"><i class="fas fa-arrow-left fa-3x"></i></a> 
+        <a href="#" class="jugar" role="button" id='play' onclick="audio()"><i class="fas fa-music fa-3x"><audio src="{{pregunta.audio_pregunta}}" autoplay id="audioPlayer"></audio></i></a> 
+      </div>   
+
     <script>
       
+      //funcion audio
+       function audio() {
+           var audio = document.getElementById("audioPlayer");
+            var button = document.getElementById("play");
+    
+          audio.play();
+        
+       }
+
       //Funcion que comprueba la respuesta correcta
       function verificarRespuesta(respuesta) {
 
@@ -94,3 +115,4 @@
         }
       }
     </script>
+

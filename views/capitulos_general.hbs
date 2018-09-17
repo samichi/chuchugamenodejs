@@ -16,9 +16,39 @@
           </div>
       </div>
       </div>
-      <div class="hero-der-arriba1">   
-        <a class="btn warning w3-button w3-circle w3-black ima" href='/excursiones_usuario/{{id}}'>
-          <img class="ami" src="../img/atras.png" alt=""/>ATRAS
-         </a>
-      </div>    
+
+
+      <div>
+        <div>
+            <div>
+                <div class="carousel-inner" role="listbox">
+                    <div class="mbr-section mbr-section-hero carousel-item dark center mbr-section-full active" data-bg-video-slide="false" style="background-image: url(/img/excursion_capitulo.png);">
+                        <div class="mbr-table-cell">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
+
+
+      <div class="dere-arriba">
+        <a href='/excursiones_usuario/{{id}}' class="jugar"><i class="fas fa-arrow-left fa-3x"></i></a> 
+        <a href="#" class="jugar" role="button" id='play' onclick="audio()"><i class="fas fa-music fa-3x"><audio src="/audio/instruccion_capitulo.mp3" autoplay id="audioPlayer"></audio></i></a>
+        
+</div>
+</div>
+
+  <audio src="/audio/instruccion_capitulo.mp3" autoplay id="audioPlayer"></audio>
+
+  <script>
+      //funcion audio
+       function audio() {
+           var audio = document.getElementById("audioPlayer");
+            var button = document.getElementById("play");
+    
+          audio.play();
+        
+       }
+    </script>
